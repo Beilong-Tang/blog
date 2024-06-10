@@ -1,6 +1,6 @@
 # Summary
 
-- [mdBook Quickstart](README.md)
+- [Welcome to my blog](README.md)
 - [Chapter 1](chapter-1.md)
 - [Chapter 2](chapter-2.md)
 - [Foo](foo/README.md)
