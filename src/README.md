@@ -8,4 +8,6 @@ View source:
 
 
 Readlly Hate DDP !!:
+
+
 You can only have one forward method in DDP system. see here (https://discuss.pytorch.org/t/multiple-forward-functions-in-dp-and-ddp/135029)
