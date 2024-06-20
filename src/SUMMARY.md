@@ -1,6 +1,6 @@
 # Summary
 
-- [Welcome to my blog](README.md)
+- [Welcome to my blog](welcome.md)
 - [Chapter 1](chapter-1.md)
 - [Chapter 2](chapter-2.md)
 - [Foo](foo/README.md)
