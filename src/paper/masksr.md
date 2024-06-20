@@ -28,6 +28,10 @@ print(w.shape)
 
 During training, the masking ratio (from 0 to 1) will be applied to \\( 9 \times T \\) codebook by sampling \\( r \sim \mathcal{U}(0, 1) \\),
 
+The cosine schedule function should be \\( f(r) = cos(\frac{\pi}{2}r) \\), this makes sure that \\(f(0) = 1\\) and \\(f(1) = 0\\).
+
+The cross entropy loss is calculated on the masking position.
+
 
 
 
