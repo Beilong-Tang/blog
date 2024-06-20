@@ -24,6 +24,12 @@ print(w.shape)
 
 ```
 
+## Cosine Scheduler
+
+During training, the masking ratio (from 0 to 1) will be applied to \\( 9 \times T \\) codebook by sampling \\( r \sim \mathcal{U}(0, 1) \\),
+
+
+
 
 
 
