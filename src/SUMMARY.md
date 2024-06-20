@@ -1,8 +1,6 @@
 # Summary
 
-- [Welcome to my blog](welcome.md)
-- [Chapter 1](chapter-1.md)
-- [Chapter 2](chapter-2.md)
-- [Foo](foo/README.md)
-    - [Fizz](foo/fizz.md)
-    - [Buzz](foo/buzz.md)
+- [Welcome to my blog](index.md)
+- [Paper](paper/index.md)
+    - [MaskSR](paper/masksr.md)
+- [Publication](publication.md)
