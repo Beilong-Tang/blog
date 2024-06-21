@@ -32,6 +32,18 @@ The cosine schedule function should be \\( f(r) = cos(\frac{\pi}{2}r) \\), this 
 
 The cross entropy loss is calculated on the masking position.
 
+## Classifier-free Guidance
+
+The Conditional logit \\( l_g \\) is used to measure \\( P(x \mid c )\\) where c is the prompt. In this case, c will be the speech encoder input.
+
+The unconditional logit \\(l_u\\) is used to measure \\( P(x \mid c )\\) where the model predicts the output without any input. 
+During inference, we just replace the entire codebook with a embedding (null embedding) repeated \\(T\\) times, and predict the output and use that as the \\(l_u\\)
+score. 
+
+During training, for each epoch, we randomly select 10% of the training data to be replaced with the null embedding.
+
+
+
 
 
 
