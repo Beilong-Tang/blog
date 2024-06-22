@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">4.</strong> Diary</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -232,7 +232,7 @@ print(w.shape)
 <p>The Conditional logit \( l_g \) is used to measure \( P(x \mid c )\) where c is the prompt. In this case, c will be the speech encoder input.</p>
 <p>The unconditional logit \(l_u\) is used to measure \( P(x \mid c )\) where the model predicts the output without any input.
 During inference, we just replace the entire codebook with a embedding (null embedding) repeated \(T\) times, and predict the output and use that as the \(l_u\)
-score.</p>
+score. The logit score for inference is defined as \(l_g = (1 + w) l_c - w l_u\).</p>
 <p>During training, for each epoch, we randomly select 10% of the training data to be replaced with the null embedding.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="publication"><a class="header" href="#publication">Publication</a></h1>
 <h2 id="2024"><a class="header" href="#2024">2024</a></h2>
@@ -248,6 +248,19 @@ score.</p>
 <p><strong>Link</strong>: <a href="https://www.arxiv.org/abs/2402.10464"><em>arxiv</em></a></p>
 </li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="linux-command"><a class="header" href="#linux-command">Linux Command</a></h1>
+<h2 id="unzip-a-file"><a class="header" href="#unzip-a-file">unzip a file</a></h2>
+<pre><code class="language-shell">unzip example.zip -d /home/user/destination
+</code></pre>
+<h2 id="untar-targz"><a class="header" href="#untar-targz">untar .tar.gz</a></h2>
+<pre><code class="language-shell">tar -xzvf filename.tar.gz -C /path/to/output/directory
+
+</code></pre>
+<h2 id="zip-a-file"><a class="header" href="#zip-a-file">zip a file</a></h2>
+<pre><code class="language-shell">
+</code></pre>
+<h2 id="tar-a-file"><a class="header" href="#tar-a-file">tar a file</a></h2>
+<pre><code class="language-shell"></code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
 
