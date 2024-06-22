@@ -10,13 +10,11 @@ unzip example.zip -d /home/user/destination
 
 ```shell
 tar -xzvf filename.tar.gz -C /path/to/output/directory
-
 ```
 
 ## zip a file 
 
 ```shell
-
 ```
 
 
