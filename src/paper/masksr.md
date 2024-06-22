@@ -38,14 +38,6 @@ The Conditional logit \\( l_g \\) is used to measure \\( P(x \mid c )\\) where c
 
 The unconditional logit \\(l_u\\) is used to measure \\( P(x \mid c )\\) where the model predicts the output without any input. 
 During inference, we just replace the entire codebook with a embedding (null embedding) repeated \\(T\\) times, and predict the output and use that as the \\(l_u\\)
-score. 
+score. The logit score for inference is defined as \\(l_g = (1 + w) l_c - w l_u\\).
 
 During training, for each epoch, we randomly select 10% of the training data to be replaced with the null embedding.
-
-
-
-
-
-
-
-
