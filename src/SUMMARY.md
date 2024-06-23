@@ -6,4 +6,5 @@
 - [Publication](publication.md)
 - [Notes](notes.md)
     - [Linux Command](command.md)
+    - [Noise RIR](rir.md)
 - [Diary](diary.md)
