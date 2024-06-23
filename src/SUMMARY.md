@@ -4,5 +4,6 @@
 - [Paper](paper/index.md)
     - [MaskSR](paper/masksr.md)
 - [Publication](publication.md)
-- [Linux Command](command.md)
+- [Notes](notes.md)
+    - [Linux Command](command.md)
 - [Diary](diary.md)
