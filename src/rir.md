@@ -49,4 +49,7 @@ rir = rir.numpy()
 
 ## doing the convolution
 output = reverb_rir(frame,rir)
+
+output = torch.from_numpy(output).unsqueeze(0)
+torchaudio.save("output.wav",output, frame_rate)
 ```
