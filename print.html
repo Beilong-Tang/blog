@@ -309,6 +309,9 @@ rir = rir.numpy()
 
 ## doing the convolution
 output = reverb_rir(frame,rir)
+
+output = torch.from_numpy(output).unsqueeze(0)
+torchaudio.save("output.wav",output, frame_rate)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
