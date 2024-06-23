@@ -53,3 +53,13 @@ output = reverb_rir(frame,rir)
 output = torch.from_numpy(output).unsqueeze(0)
 torchaudio.save("output.wav",output, frame_rate)
 ```
+
+## perform clipping:
+
+```python
+### perform clipping
+clip_factor = 0.1
+z = torch.clamp(output,min = output.min() * clip_factor, max = output.max() * clip_factor)
+print(z.min())
+torchaudio.save("clamp.wav",z, frame_rate)
+```
