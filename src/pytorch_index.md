@@ -52,5 +52,7 @@ A[batch]
 torch.Size([2, 2, 2, 2])
 """
 ```
-The principle is simple, for each element in the index, we take the corresponding element in A.
-Each element in A has shape `[2,2]`
+The principle is simple. For each element in the index, we take the corresponding element in A.
+
+Therefore, the result will be `[[A[0],A[0]], [A[1],A[1]]]`.
+Each element in A has shape `[2,2]`, so the result will be of shape `[2,2,2,2]`.
