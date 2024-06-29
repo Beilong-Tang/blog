@@ -178,7 +178,16 @@
                         <h1 id="pytorch-index"><a class="header" href="#pytorch-index">Pytorch Index</a></h1>
 <p>This post really helps:</p>
 <p><img src="https://zhuanlan.zhihu.com/p/471313188" alt="here" /></p>
-<p>Let's assume we have tensor of shape [B, H, C], there are two ways to select the index of the batch.</p>
+<p>Let's assume we have tensor <code>A</code> of shape [B, H, C], there are two ways to select the index of the batch.</p>
+<ol>
+<li>
+<p>A[tensor]</p>
+</li>
+<li>
+<p>A[tensor, tensor, ...]</p>
+</li>
+</ol>
+<p>This one will collect all the indexes across tensors at the same position, and use that as the index.</p>
 
                     </main>
 
