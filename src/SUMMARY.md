@@ -7,4 +7,5 @@
 - [Notes](notes.md)
     - [Linux Command](command.md)
     - [Noise RIR](rir.md)
+    - [Pytorch](pytorch.md)
 - [Diary](diary.md)
