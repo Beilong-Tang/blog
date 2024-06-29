@@ -49,8 +49,8 @@ we will have a result tensor of shape `2,2,2,2`
 ```python
 A[batch]
 """
-
-
+torch.Size([2, 2, 2, 2])
 """
-
 ```
+The principle is simple, for each element in the index, we take the corresponding element in A.
+Each element in A has shape `[2,2]`
