@@ -340,8 +340,10 @@ torchaudio.save("clamp.wav",z, frame_rate)
 <h2 id="atensor-tensor-"><a class="header" href="#atensor-tensor-">A[tensor, tensor, ...]</a></h2>
 <p>This one will collect all the indexes across tensors at the same position, and use that as the index.</p>
 <p>For example:</p>
-<pre><code class="language-python">t = torch.tensor([[1, 2], [3, 4]])
+<pre><code class="language-python">## creating A
+t = torch.tensor([[1, 2], [3, 4]])
 w = -t 
+###
 A = torch.cat((t.unsqueeze(0), w.unsqueeze(0))) # [2, 2, 2]
 """
 A:
@@ -363,9 +365,16 @@ tensor([[ 2,  3],
 <p>In the above code, the index is <code>(0,0,1) (0,1,0) (1,1,1) (1 1 0)</code></p>
 <p>The result is <code>[[A[0,0,1],A[0,1,0]],[A[1,1,1],A[1,1,0]]]</code></p>
 <h2 id="atensor"><a class="header" href="#atensor">A[tensor]</a></h2>
-<p>Assume we only have one tensor to index</p>
-<p>As the example above, we only use the <code>batch</code> tensor to index <code>A</code>,</p>
-<p>we will have a result tensor of shape <code>2,2,2,2</code></p>
+<p>Assume we only have one tensor as indexing tensor.</p>
+<p>As the example above, we only use the <code>batch</code> tensor to index <code>A</code>, therefore
+we will have a result tensor of shape <code>2,2,2,2</code></p>
+<pre><code class="language-python">A[batch]
+"""
+
+
+"""
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
 
