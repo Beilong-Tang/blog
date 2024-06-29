@@ -14,8 +14,10 @@ This one will collect all the indexes across tensors at the same position, and u
 For example:
 
 ```python
+## creating A
 t = torch.tensor([[1, 2], [3, 4]])
 w = -t 
+###
 A = torch.cat((t.unsqueeze(0), w.unsqueeze(0))) # [2, 2, 2]
 """
 A:
@@ -40,8 +42,15 @@ In the above code, the index is `(0,0,1) (0,1,0) (1,1,1) (1 1 0)`
 The result is `[[A[0,0,1],A[0,1,0]],[A[1,1,1],A[1,1,0]]]`
 
 ## A[tensor]
-Assume we only have one tensor to index
+Assume we only have one tensor as indexing tensor.
 
-As the example above, we only use the `batch` tensor to index `A`,
-
+As the example above, we only use the `batch` tensor to index `A`, therefore
 we will have a result tensor of shape `2,2,2,2`
+```python
+A[batch]
+"""
+
+
+"""
+
+```
