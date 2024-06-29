@@ -32,5 +32,8 @@ batch = torch.LongTensor([[0,0],[1,1]]) # [2,2]
 row = torch.LongTensor([[0,1],[1,1]])   # [2,2]
 col = torch.LongTensor([[1,0],[1,0]])   # [2,2]
 res = A[batch, row, col]
-
+"""
+tensor([[ 2,  3],
+        [-4, -3]])
+"""
 ```
