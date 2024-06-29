@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Beilong Tang (DKU)</title>
-        <base href="/">
+        <title>Pytorch - Beilong Tang (DKU)</title>
 
 
         <!-- Custom HTML head -->
@@ -91,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="pytorch.html" class="active"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,14 +175,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="pytorch"><a class="header" href="#pytorch">Pytorch</a></h1>
+<p>This is the notes and tricks for pytorch.</p>
+<h2 id="to"><a class="header" href="#to">to()</a></h2>
+<p>When calling <code>to()</code> on tensors, it is not directly moving the original tensor to the specified device. Instead, it will move the copy of the tensor to the device and return the new tensor.</p>
+<p>If you want the original tensor to be moved to the device, you should do</p>
+<pre><code class="language-python">x = x.to(device)
+</code></pre>
+<p>However, if you want to move a model to a device, you can just do</p>
+<pre><code class="language-python">model.to(device)
+</code></pre>
+<h2 id="ddp"><a class="header" href="#ddp">DDP</a></h2>
+<p>For the gradients to correctly flow during training, we should only call the model's forward method instead of some other defined methods.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="rir.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next prefetch" href="diary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -191,7 +206,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="rir.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next prefetch" href="diary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

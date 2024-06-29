@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -249,7 +249,7 @@ score. The logit score for inference is defined as \(l_g = (1 + w) l_c - w l_u\)
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="notes"><a class="header" href="#notes">Notes</a></h1>
-<p>When reading audio, it is better to normalize it before doing other operations.</p>
+<p>When reading audio, it is better to normalize it before doing other operations (to avoid nan problem).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-command"><a class="header" href="#linux-command">Linux Command</a></h1>
 <h2 id="unzip-a-file"><a class="header" href="#unzip-a-file">unzip a file</a></h2>
 <pre><code class="language-shell">unzip example.zip -d /home/user/destination
@@ -321,6 +321,18 @@ z = torch.clamp(output,min = output.min() * clip_factor, max = output.max() * cl
 print(z.min())
 torchaudio.save("clamp.wav",z, frame_rate)
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pytorch"><a class="header" href="#pytorch">Pytorch</a></h1>
+<p>This is the notes and tricks for pytorch.</p>
+<h2 id="to"><a class="header" href="#to">to()</a></h2>
+<p>When calling <code>to()</code> on tensors, it is not directly moving the original tensor to the specified device. Instead, it will move the copy of the tensor to the device and return the new tensor.</p>
+<p>If you want the original tensor to be moved to the device, you should do</p>
+<pre><code class="language-python">x = x.to(device)
+</code></pre>
+<p>However, if you want to move a model to a device, you can just do</p>
+<pre><code class="language-python">model.to(device)
+</code></pre>
+<h2 id="ddp"><a class="header" href="#ddp">DDP</a></h2>
+<p>For the gradients to correctly flow during training, we should only call the model's forward method instead of some other defined methods.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
 
