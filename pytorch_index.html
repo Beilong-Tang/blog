@@ -177,7 +177,7 @@
                     <main>
                         <h1 id="pytorch-index"><a class="header" href="#pytorch-index">Pytorch Index</a></h1>
 <p>This post really helps:</p>
-<p><img src="https://zhuanlan.zhihu.com/p/471313188" alt="here" /></p>
+<p><a href="https://zhuanlan.zhihu.com/p/471313188">here</a></p>
 <p>Let's assume we have tensor <code>A</code> of shape [B, H, C], there are two ways to select the index of the batch.</p>
 <ol>
 <li>
@@ -209,6 +209,8 @@ tensor([[ 2,  3],
         [-4, -3]])
 """
 </code></pre>
+<p>In the above code, the index is <code>(0,0,1) (0,1,0) (1,1,1) (1 1 0)</code></p>
+<p>The result is <code>[[A[0,0,1],A[0,1,0]],[A[1,1,1],A[1,1,0]]]</code></p>
 
                     </main>
 

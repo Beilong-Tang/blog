@@ -335,7 +335,7 @@ torchaudio.save("clamp.wav",z, frame_rate)
 <p>For the gradients to correctly flow during training, we should only call the model's forward method instead of some other defined methods.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pytorch-index"><a class="header" href="#pytorch-index">Pytorch Index</a></h1>
 <p>This post really helps:</p>
-<p><img src="https://zhuanlan.zhihu.com/p/471313188" alt="here" /></p>
+<p><a href="https://zhuanlan.zhihu.com/p/471313188">here</a></p>
 <p>Let's assume we have tensor <code>A</code> of shape [B, H, C], there are two ways to select the index of the batch.</p>
 <ol>
 <li>
@@ -367,6 +367,8 @@ tensor([[ 2,  3],
         [-4, -3]])
 """
 </code></pre>
+<p>In the above code, the index is <code>(0,0,1) (0,1,0) (1,1,1) (1 1 0)</code></p>
+<p>The result is <code>[[A[0,0,1],A[0,1,0]],[A[1,1,1],A[1,1,0]]]</code></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
 
