@@ -12,6 +12,12 @@ unzip example.zip -d /home/user/destination
 tar -xzvf filename.tar.gz -C /path/to/output/directory
 ```
 
+## untar .tar
+```shell
+mkdir output
+tar -xvf x.tar -C output
+```
+
 ## zip a file 
 
 ```shell
