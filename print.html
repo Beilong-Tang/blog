@@ -325,7 +325,11 @@ z = torch.clamp(output,min = output.min() * clip_factor, max = output.max() * cl
 print(z.min())
 torchaudio.save("clamp.wav",z, frame_rate)
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="pytorch"><a class="header" href="#pytorch">Pytorch</a></h1>
+<audio controls autoplay muted>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="https://www.w3schools.com/html/horse.ogg" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><div style="break-before: page; page-break-before: always;"></div><h1 id="pytorch"><a class="header" href="#pytorch">Pytorch</a></h1>
 <p>This is the notes and tricks for pytorch.</p>
 <h2 id="to"><a class="header" href="#to">to()</a></h2>
 <p>When calling <code>to()</code> on tensors, it is not directly moving the original tensor to the specified device. Instead, it will move the copy of the tensor to the device and return the new tensor.</p>
