@@ -9,7 +9,10 @@
             gap: 10px; /* Space between the audio elements in a row */
         }
         .audio-item {
-            text-align: center; /* Center-align the captions */
+            flex: 1; /* Make each audio item take up an equal amount of space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .audio-item audio {
             width: 100%; /* Make audio elements take the full width of their container */
@@ -20,7 +23,7 @@
 
 Using WavLM and SEF Network and Lanaguage Model for target Speaker Separation
 
-Full audio goes to: 
+Full audio goes to [here](https://github.com/Beilong-Tang/blog/tree/main/src/audio/wavseflm). 
 
 demo: 
 
@@ -35,10 +38,10 @@ demo:
 
         // Get the container element
         const container = document.getElementById('audioContainer');
-        const name = ["mix", "clean", "output", "enroll"]
+        const name = ["mix", "clean", "output_", "regi"]
 
         // Loop to create rows
-        for (let i = 0; i < numRows; i++) {
+        for (let i = 0; i <= numRows; i++) {
             // Create a new div for each row
             const row = document.createElement('div');
             row.className = 'audio-row';
@@ -55,13 +58,13 @@ demo:
                 const audio = document.createElement('audio');
                 audio.controls = true;
                 const source = document.createElement('source');
-                source.src = `./audio/wavseflm/${i}_clean.wav`; // Dynamic source based on the index
+                source.src = `./audio/wavseflm/${i}_${name[j]}.wav`; // Dynamic source based on the index
                 source.type = 'audio/mpeg';
                 audio.appendChild(source);
 
                 // Create the caption
                 const caption = document.createElement('p');
-                caption.textContent = `Caption for Audio ${name[j]}`;
+                caption.textContent = `${name[j]}_${i}.wav`;
 
                 // Append the audio and caption to the audio item container
                 audioItem.appendChild(audio);
