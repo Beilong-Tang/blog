@@ -10,3 +10,4 @@
     - [Pytorch](pytorch.md)
         - [Pytorch Index](pytorch_index.md)
 - [Diary](diary.md)
+- [WavSEFLM](wavseflm.md)
