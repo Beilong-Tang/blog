@@ -42,11 +42,11 @@ demo:
 <script>
         // Number of rows to create
         const numRows = 23;
-        const audiosPerRow = 4;
+        const audiosPerRow = 5;
 
         // Get the container element
         const container = document.getElementById('audioContainer');
-        const name = ["mix", "clean", "output_", "regi"]
+        const name = ["mix", "clean", "output_", "output_mse", "regi"]
 
         // Loop to create rows
         for (let i = 0; i <= numRows; i++) {
