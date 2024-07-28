@@ -409,6 +409,10 @@ Each element in A has shape <code>[2,2]</code>, so the result will be of shape <
 <h1 id="wavseflm"><a class="header" href="#wavseflm">WavSEFLM</a></h1>
 <p>Using WavLM and SEF Network and Lanaguage Model for target Speaker Separation</p>
 <p>Full audio goes to <a href="https://github.com/Beilong-Tang/blog/tree/main/src/audio/wavseflm">here</a>.</p>
+<p>The highest similarity audio is 4, 16, 19.</p>
+<p>The encoder decoder loses the information of a male voice: 21, 22, 23 (Must train kmeans and vocoder).</p>
+<p>Not clear audio: 6, 17, 21.</p>
+<p>The reat audios suffer from tone loss.</p>
 <p>demo:</p>
 <div class="audio-container" id="audioContainer">
         <!-- Rows will be dynamically added here -->
