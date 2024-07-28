@@ -25,6 +25,14 @@ Using WavLM and SEF Network and Lanaguage Model for target Speaker Separation
 
 Full audio goes to [here](https://github.com/Beilong-Tang/blog/tree/main/src/audio/wavseflm). 
 
+The highest similarity audio is 4, 16, 19. 
+
+The encoder decoder loses the information of a male voice: 21, 22, 23 (Must train kmeans and vocoder).
+
+Not clear audio: 6, 17, 21.
+
+The reat audios suffer from tone loss.
+
 demo: 
 
 <div class="audio-container" id="audioContainer">
