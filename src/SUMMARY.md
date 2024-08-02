@@ -9,5 +9,6 @@
     - [Noise RIR](rir.md)
     - [Pytorch](pytorch.md)
         - [Pytorch Index](pytorch_index.md)
+    - [Load Kmeans](load_kmeans.md)
 - [Diary](diary.md)
 - [WavSEFLM](wavseflm.md)
