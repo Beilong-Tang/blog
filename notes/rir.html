@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Pytorch Index - Beilong Tang (DKU)</title>
+        <title>Noise RIR - Beilong Tang (DKU)</title>
 
 
         <!-- Custom HTML head -->
@@ -12,21 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -37,7 +37,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes/notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pytorch_index.html" class="active"><strong aria-hidden="true">4.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="load_kmeans.html"><strong aria-hidden="true">4.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li><li class="chapter-item expanded "><a href="wavseflm.html"><strong aria-hidden="true">6.</strong> WavSEFLM</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="../paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="../publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="../notes/notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../notes/command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="../notes/rir.html" class="active"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="../notes/pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../notes/pytorch_index.html"><strong aria-hidden="true">4.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="../notes/load_kmeans.html"><strong aria-hidden="true">4.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="../diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li><li class="chapter-item expanded "><a href="../wavseflm.html"><strong aria-hidden="true">6.</strong> WavSEFLM</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -146,7 +146,7 @@
                     <h1 class="menu-title">Beilong Tang (DKU)</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -175,59 +175,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="pytorch-index"><a class="header" href="#pytorch-index">Pytorch Index</a></h1>
-<p>This post really helps:</p>
-<p><a href="https://zhuanlan.zhihu.com/p/471313188">here</a></p>
-<p>Let's assume we have tensor <code>A</code> of shape [B, H, C], the basic way to select the index of the batch is:</p>
-<h2 id="atensor-tensor-"><a class="header" href="#atensor-tensor-">A[tensor, tensor, ...]</a></h2>
-<p>This one will collect all the indexes across tensors at the same position, and use that as the index.</p>
-<p>For example:</p>
-<pre><code class="language-python">## creating A
-t = torch.tensor([[1, 2], [3, 4]])
-w = -t 
-###
-A = torch.cat((t.unsqueeze(0), w.unsqueeze(0))) # [2, 2, 2]
-"""
-A:
-tensor([[[ 1,  2],
-         [ 3,  4]],
-
-        [[-1, -2],
-         [-3, -4]]])
-"""
-batch = torch.LongTensor([[0,0],[1,1]]) # [2,2]
-row = torch.LongTensor([[0,1],[1,1]])   # [2,2]
-col = torch.LongTensor([[1,0],[1,0]])   # [2,2]
-res = A[batch, row, col]
-"""
-tensor([[ 2,  3],
-        [-4, -3]])
-"""
-</code></pre>
-<p>In the above code, the index is <code>(0,0,1) (0,1,0) (1,1,1) (1 1 0)</code></p>
-<p>The result is <code>[[A[0,0,1],A[0,1,0]],[A[1,1,1],A[1,1,0]]]</code></p>
-<h2 id="atensor"><a class="header" href="#atensor">A[tensor]</a></h2>
-<p>Assume we only have one tensor as indexing tensor.</p>
-<p>As the example above, we only use the <code>batch</code> tensor to index <code>A</code>, therefore
-we will have a result tensor of shape <code>2,2,2,2</code></p>
-<pre><code class="language-python">A[batch]
-"""
-torch.Size([2, 2, 2, 2])
-"""
-</code></pre>
-<p>The principle is simple. For each element in the index, we take the corresponding element in A.</p>
-<p>Therefore, the result will be <code>[[A[0],A[0]], [A[1],A[1]]]</code>.
-Each element in A has shape <code>[2,2]</code>, so the result will be of shape <code>[2,2,2,2]</code>.</p>
+                        <h1 id="noise-rir"><a class="header" href="#noise-rir">Noise RIR</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="pytorch.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../notes/command.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="load_kmeans.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../notes/pytorch.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -237,11 +195,11 @@ Each element in A has shape <code>[2,2]</code>, so the result will be of shape <
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="pytorch.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../notes/command.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="load_kmeans.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../notes/pytorch.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -256,13 +214,13 @@ Each element in A has shape <code>[2,2]</code>, so the result will be of shape <
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 

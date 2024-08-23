@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Load Kmeans - Beilong Tang (DKU)</title>
+        <title>Pytorch - Beilong Tang (DKU)</title>
 
 
         <!-- Custom HTML head -->
@@ -12,21 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -37,7 +37,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes/notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="pytorch_index.html"><strong aria-hidden="true">4.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="load_kmeans.html" class="active"><strong aria-hidden="true">4.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li><li class="chapter-item expanded "><a href="wavseflm.html"><strong aria-hidden="true">6.</strong> WavSEFLM</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="../paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="../publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="../notes/notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../notes/command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="../notes/rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="../notes/pytorch.html" class="active"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../notes/pytorch_index.html"><strong aria-hidden="true">4.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="../notes/load_kmeans.html"><strong aria-hidden="true">4.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="../diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li><li class="chapter-item expanded "><a href="../wavseflm.html"><strong aria-hidden="true">6.</strong> WavSEFLM</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -146,7 +146,7 @@
                     <h1 class="menu-title">Beilong Tang (DKU)</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -175,84 +175,28 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="load-kmeans"><a class="header" href="#load-kmeans">Load Kmeans</a></h1>
-<pre><code class="language-python">import os 
-import sys 
-import pickle
-import joblib
-import torch
-from sklearn.cluster import MiniBatchKMeans
-sys.path.append("../") 
-from models.modules.kmeans import KMeansQuantizer as Kmeans
+                        <h1 id="pytorch"><a class="header" href="#pytorch"># Pytorch</a></h1>
+<p>This is the notes and tricks for pytorch.</p>
+<h2 id="to"><a class="header" href="#to">to()</a></h2>
+<p>When calling <code>to()</code> on tensors, it is not directly moving the original tensor to the specified device. Instead, it will move the copy of the tensor to the device and return the new tensor.</p>
+<p>If you want the original tensor to be moved to the device, you should do</p>
+<pre><code class="language-python">x = x.to(device)
 </code></pre>
-<pre><code class="language-python">### load kmeans model
-kmeans_ckpt = "/home/bltang/work/test/kmeans_4096_batch_size_16.pkl"
-def load_dict(file_path):
-    with open(file_path, "rb") as file:
-        return pickle.load(file)
-res = load_dict(kmeans_ckpt)
+<p>However, if you want to move a model to a device, you can just do</p>
+<pre><code class="language-python">model.to(device)
 </code></pre>
-<pre><code>/home/bltang/.local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator MiniBatchKMeans from version 1.5.1 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
-https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
-  warnings.warn(
-</code></pre>
-<pre><code class="language-python">for key in res:
-    print(key)
-</code></pre>
-<pre><code>resume
-step
-feature_list
-kmeans
-</code></pre>
-<pre><code class="language-python">kmeans_model:MiniBatchKMeans = res["kmeans"]
-joblib.dump(kmeans_model, "/home/bltang/work/wavlm_kmeans_backend/ckpt/kmeans_gigaspeech_4096.pt")
-</code></pre>
-<pre><code>['/home/bltang/work/wavlm_kmeans_backend/ckpt/kmeans_gigaspeech_4096.pt']
-</code></pre>
-<pre><code class="language-python">kmeans_pytorch = Kmeans("/home/bltang/work/wavlm_kmeans_backend/ckpt/kmeans_gigaspeech_4096.pt")
-</code></pre>
-<h2 id="test"><a class="header" href="#test">Test</a></h2>
-<pre><code class="language-python">x = torch.randint(0,4096, (2, 30)).long()
-print(x)
-kmeans_pytorch.emb(x)
-</code></pre>
-<pre><code>tensor([[1418, 1143,  728, 3682, 2837,  299, 2354, 1865,  156,  830,  409,  892,
-         3274, 3682,  872,  510, 3785, 3780, 3297, 1187, 1234, 2075,  616, 2053,
-         1168,  635,  320, 1091,  738, 2829],
-        [ 158,  830, 4059, 3800, 1810, 2425, 3992, 1535, 3935, 1102,  297, 1540,
-         2149, 2414, 1222, 3968, 3072, 3858, 1115,  701, 2100, 2951, 1291, 3721,
-         1296, 2966,  960, 2327, 2188, 1239]])
-
-
-
-
-
-tensor([[[ 3.4845,  0.5973, -0.2941,  ...,  1.8850, -3.3292, -3.1918],
-         [-0.9843, -1.8948,  0.1781,  ...,  1.0470, -2.2949, -3.0003],
-         [-2.4003, -0.3012,  2.5385,  ...,  0.2260, -0.4540, -0.7819],
-         ...,
-         [ 1.5334, -1.6515,  0.1410,  ...,  0.8672, -1.2393, -0.5327],
-         [ 1.1343, -0.0071,  0.2196,  ...,  1.9066, -3.0079, -2.2519],
-         [-0.8302,  0.0227,  2.9222,  ..., -0.1998,  0.5812, -1.3175]],
-
-        [[ 0.5794,  0.3916,  3.1679,  ..., -0.7281, -0.7220, -0.4178],
-         [-0.6731, -1.0334,  2.3820,  ...,  2.1921, -1.0713, -0.1829],
-         [-1.8742, -3.6283, -0.3614,  ...,  1.6077, -1.6078, -2.0266],
-         ...,
-         [-0.5319, -0.7900,  2.3659,  ..., -1.6811, -1.6981, -2.6017],
-         [ 3.1977, -3.8897,  0.7760,  ..., -1.5524,  2.8854, -2.0698],
-         [ 0.0547, -0.4102,  2.9803,  ...,  0.2289, -0.3999, -1.0432]]])
-</code></pre>
+<h2 id="ddp"><a class="header" href="#ddp">DDP</a></h2>
+<p>For the gradients to correctly flow during training, we should only call the model's forward method instead of some other defined methods.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="pytorch_index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../notes/rir.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="diary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../notes/pytorch_index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -262,11 +206,11 @@ tensor([[[ 3.4845,  0.5973, -0.2941,  ...,  1.8850, -3.3292, -3.1918],
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="pytorch_index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../notes/rir.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="diary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../notes/pytorch_index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -281,13 +225,13 @@ tensor([[[ 3.4845,  0.5973, -0.2941,  ...,  1.8850, -3.3292, -3.1918],
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
