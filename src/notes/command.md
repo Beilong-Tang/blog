@@ -18,6 +18,12 @@ mkdir output
 tar -xvf x.tar -C output
 ```
 
+## Show all files under a folder
+
+```shell
+
+```
+
 ## zip a file 
 
 ```shell
