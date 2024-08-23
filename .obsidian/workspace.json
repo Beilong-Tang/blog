@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/paper/masksr.md",
+                "file": "src/notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/paper/masksr.md",
+                "file": "src/notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/paper/masksr.md",
+                "file": "src/notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/paper/masksr.md"
+                "file": "src/notes.md"
               }
             }
           }
@@ -148,6 +148,16 @@
   },
   "active": "ddfab75a8bc9748b",
   "lastOpenFiles": [
+    "src/wavseflm.md",
+    "src/notes.md",
+    "src/SUMMARY.md",
+    "src/README.md",
+    "src/pytorch.md",
+    "src/publication.md",
+    "src/pytorch_index.md",
+    "src/index.md",
+    "src/command.md",
+    "src/paper/masksr.md",
     "src/paper/index.md",
     "src/load_kmeans.md",
     "sample.png",
