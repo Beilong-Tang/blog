@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/wavseflm.md",
+                "file": "src/SUMMARY.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/wavseflm.md",
+                "file": "src/SUMMARY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/wavseflm.md",
+                "file": "src/SUMMARY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/wavseflm.md"
+                "file": "src/SUMMARY.md"
               }
             }
           }
@@ -146,10 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ddfab75a8bc9748b",
+  "active": "b117cceadcf94548",
   "lastOpenFiles": [
-    "src/wavseflm.md",
+    "src/target",
+    "target/index.md",
     "src/SUMMARY.md",
+    "src/wavseflm.md",
+    "target",
     "src/index.md",
     "src/notes.md",
     "src/diary.md",
