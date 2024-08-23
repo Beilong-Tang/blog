@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/target/index.md.md",
+                "file": "src/notes/command.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/target/index.md.md",
+                "file": "src/notes/command.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/target/index.md.md",
+                "file": "src/notes/command.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/target/index.md.md"
+                "file": "src/notes/command.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "ddfab75a8bc9748b",
   "lastOpenFiles": [
+    "src/target/index.md.md",
     "src/notes/command.md",
     "target/index.md",
     "src/SUMMARY.md",
-    "src/target/index.md.md",
     "src/wavseflm.md",
     "src/index.md",
     "src/target",

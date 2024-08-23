@@ -18,10 +18,10 @@ mkdir output
 tar -xvf x.tar -C output
 ```
 
-## Show all files under a folder
+## Count all files under a folder
 
 ```shell
-
+find . -type f | wc -l
 ```
 
 ## zip a file 
