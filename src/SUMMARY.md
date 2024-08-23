@@ -4,7 +4,7 @@
 - [Paper](paper/index.md)
     - [MaskSR](paper/masksr.md)
 - [Publication](publication.md)
-- [Notes](notes.md)
+- [Notes](notes/notes.md)
     - [Linux Command](command.md) 
     - [Noise RIR](rir.md)
     - [Pytorch](pytorch.md)
