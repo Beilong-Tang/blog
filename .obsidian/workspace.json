@@ -13,18 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/notes/rir.md",
+                "file": "src/wavseflm.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "5ccb5b586bac8c60",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/notes/rir.md",
+                "file": "src/wavseflm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/notes/rir.md",
+                "file": "src/wavseflm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/notes/rir.md"
+                "file": "src/wavseflm.md"
               }
             }
           }
@@ -156,9 +148,16 @@
   },
   "active": "ddfab75a8bc9748b",
   "lastOpenFiles": [
-    "src/rir.md",
+    "src/wavseflm.md",
     "src/SUMMARY.md",
+    "src/index.md",
+    "src/notes.md",
+    "src/diary.md",
+    "src/notes/command.md",
+    "src/command.md",
     "src/README.md",
+    "src/notes/rir.md",
+    "src/rir.md",
     "src/paper/index.md",
     "src/notes/notes.md",
     "src/notes/load_kmeans.md",
@@ -168,19 +167,13 @@
     "src/notes/pytorch_index.md",
     "src/notespytorch_index.md",
     "src/notes/pytorch_index 1.md",
-    "src/notes/rir.md",
     "book/notespytorch_index.html",
-    "src/notes/command.md",
-    "src/command.md",
-    "src/notes.md",
     "src/paper/masksr.md",
     "src/audio/wavseflm/0_output_.wav",
     "book/notes/notes.html",
     "book/notes",
     "src/notes",
-    "src/wavseflm.md",
     "src/publication.md",
-    "src/index.md",
     "sample.png",
     "README.md"
   ]
