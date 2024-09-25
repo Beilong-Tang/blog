@@ -1,5 +1,7 @@
 # Linux Command
 
+> This page denotes the commonly used linux commands
+
 ## unzip a file 
 
 ```shell
@@ -33,7 +35,22 @@ find . -type f | wc -l
 ## tar a file 
 
 ```shell
+tar -czvf archive_name.tar.gz /path/to/folder
+```
+## Untar (extract) a file 
+```shell
+tar -xzvf archive_name.tar.gz
+```
+## Run commands in multiple lines
+
+Example:
+
+```shell
+sbatch -J ${JOB_NAME} -p ${card} -e ${log_path}/${current_datetime}.err -o ${log_path}/${current_datetime}.out -N ${num_nodes} --cpus-per-task=${cpus_per_task} \
+  --gres=dcu:${gpus_per_node} --ntasks-per-node=${ntasks_per_node} \
+  --exclusive \
 ```
 
+We can use `\` to seperate
 
-
+wer   /public/home/qinxy/bltang/ml_framework_slurm/exp/dasb/target/wavlm_6_layer/output/wsj0_2mix/trans_output.txt

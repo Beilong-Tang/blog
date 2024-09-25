@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cc3437286ae1a7c7",
+        "id": "22690162fb7a0b0d",
         "type": "tabs",
         "children": [
           {
-            "id": "ddfab75a8bc9748b",
+            "id": "2cf5b99483507eaf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "src/notes/command.md",
-                "mode": "source",
-                "source": false
+                "file": "sample.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/notes/command.md",
+                "file": "sample.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/notes/command.md",
+                "file": "sample.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/notes/command.md"
+                "file": "sample.png"
               }
             }
           }
@@ -146,10 +144,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ddfab75a8bc9748b",
+  "active": "2cf5b99483507eaf",
   "lastOpenFiles": [
-    "src/target/index.md.md",
     "src/notes/command.md",
+    "2024_09_08.md",
+    "Untitled",
+    "src/notes/notes.md",
+    "Future Experiments to Run.md",
+    "sample.png",
+    "README.md",
+    "src/target/index.md.md",
     "target/index.md",
     "src/SUMMARY.md",
     "src/wavseflm.md",
@@ -163,7 +167,6 @@
     "src/notes/rir.md",
     "src/rir.md",
     "src/paper/index.md",
-    "src/notes/notes.md",
     "src/notes/load_kmeans.md",
     "src/load_kmeans.md",
     "src/notes/pytorch.md",
@@ -176,9 +179,6 @@
     "src/audio/wavseflm/0_output_.wav",
     "book/notes/notes.html",
     "book/notes",
-    "src/notes",
-    "src/publication.md",
-    "sample.png",
-    "README.md"
+    "src/notes"
   ]
 }
