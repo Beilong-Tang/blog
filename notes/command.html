@@ -176,6 +176,9 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="linux-command"><a class="header" href="#linux-command">Linux Command</a></h1>
+<blockquote>
+<p>This page denotes the commonly used linux commands</p>
+</blockquote>
 <h2 id="unzip-a-file"><a class="header" href="#unzip-a-file">unzip a file</a></h2>
 <pre><code class="language-shell">unzip example.zip -d /home/user/destination
 </code></pre>
@@ -192,7 +195,19 @@ tar -xvf x.tar -C output
 <h2 id="zip-a-file"><a class="header" href="#zip-a-file">zip a file</a></h2>
 <pre><code class="language-shell"></code></pre>
 <h2 id="tar-a-file"><a class="header" href="#tar-a-file">tar a file</a></h2>
-<pre><code class="language-shell"></code></pre>
+<pre><code class="language-shell">tar -czvf archive_name.tar.gz /path/to/folder
+</code></pre>
+<h2 id="untar-extract-a-file"><a class="header" href="#untar-extract-a-file">Untar (extract) a file</a></h2>
+<pre><code class="language-shell">tar -xzvf archive_name.tar.gz
+</code></pre>
+<h2 id="run-commands-in-multiple-lines"><a class="header" href="#run-commands-in-multiple-lines">Run commands in multiple lines</a></h2>
+<p>Example:</p>
+<pre><code class="language-shell">sbatch -J ${JOB_NAME} -p ${card} -e ${log_path}/${current_datetime}.err -o ${log_path}/${current_datetime}.out -N ${num_nodes} --cpus-per-task=${cpus_per_task} \
+  --gres=dcu:${gpus_per_node} --ntasks-per-node=${ntasks_per_node} \
+  --exclusive \
+</code></pre>
+<p>We can use <code>\</code> to seperate</p>
+<p>wer   /public/home/qinxy/bltang/ml_framework_slurm/exp/dasb/target/wavlm_6_layer/output/wsj0_2mix/trans_output.txt</p>
 
                     </main>
 
