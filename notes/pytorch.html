@@ -187,6 +187,25 @@
 </code></pre>
 <h2 id="ddp"><a class="header" href="#ddp">DDP</a></h2>
 <p>For the gradients to correctly flow during training, we should only call the model's forward method instead of some other defined methods.</p>
+<h2 id="torchcudaset_device"><a class="header" href="#torchcudaset_device">torch.cuda.set_device()</a></h2>
+<p>When you're working with PyTorch and CUDA, setting the environment variable <code>CUDA_VISIBLE_DEVICES</code> will define which GPUs are available for PyTorch to use. However, it's important to note that this variable accepts a comma-separated list of device indices which PyTorch should remap to logically.</p>
+<p>So if you have, for example, four GPUs in your system (indices 0, 1, 2, 3) and you set <code>CUDA_VISIBLE_DEVICES=2</code>, PyTorch will then only see one GPU, and it will be remapped to index 0 when accessed from PyTorch (not index 2).</p>
+<p>Here's how you would set it and use <code>torch.cuda.set_device</code> in Python:</p>
+<pre><code class="language-python">import os import torch  # Make only GPU with original index 2 available to PyTorch 
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # Since CUDA_VISIBLE_DEVICES is set to '2', PyTorch will see this as device '0' 
+torch.cuda.set_device(0) ## Not 2
+</code></pre>
+<p>Remember, <code>torch.cuda.set_device</code> expects the logical device index, which means that, after setting <code>CUDA_VISIBLE_DEVICES</code>, the visible devices will start from zero regardless of their actual hardware indices.</p>
+<p>So in your case, if setting <code>os.environ['CUDA_VISIBLE_DEVICES'] = '2'</code> and then calling <code>torch.cuda.set_device(2)</code> results in a device error, that's likely because you've changed what device "2" actually refers to. In reality, after setting <code>CUDA_VISIBLE_DEVICES</code>, the device you're trying to access is probably at index "0".</p>
+<p>You should do the following:</p>
+<pre><code class="language-python">
+import os
+import torch
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'  # Now there's only one GPU visible to the process.
+torch.cuda.set_device(0)  # This refers to the single visible GPU, which is the original device 2.
+</code></pre>
+<p>Run these snippets before executing other PyTorch code that works with CUDA, as changing <code>CUDA_VISIBLE_DEVICES</code> after CUDA context has been initialized may not have an effect.</p>
 
                     </main>
 
