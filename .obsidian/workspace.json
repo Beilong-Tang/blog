@@ -11,9 +11,11 @@
             "id": "2cf5b99483507eaf",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "sample.png"
+                "file": "src/notes/pytorch.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sample.png",
+                "file": "src/notes/pytorch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sample.png",
+                "file": "src/notes/pytorch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sample.png"
+                "file": "src/notes/pytorch.md"
               }
             }
           }
@@ -146,12 +148,12 @@
   },
   "active": "2cf5b99483507eaf",
   "lastOpenFiles": [
+    "sample.png",
     "src/notes/command.md",
     "2024_09_08.md",
     "Untitled",
     "src/notes/notes.md",
     "Future Experiments to Run.md",
-    "sample.png",
     "README.md",
     "src/target/index.md.md",
     "target/index.md",
