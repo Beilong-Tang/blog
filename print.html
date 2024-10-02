@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="publication.html"><strong aria-hidden="true">3.</strong> Publication</a></li><li class="chapter-item expanded "><a href="notes/notes.html"><strong aria-hidden="true">4.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="notes/command.html"><strong aria-hidden="true">4.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="notes/rir.html"><strong aria-hidden="true">4.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="notes/pytorch.html"><strong aria-hidden="true">4.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="notes/pytorch_index.html"><strong aria-hidden="true">4.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="notes/load_kmeans.html"><strong aria-hidden="true">4.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">5.</strong> Diary</a></li><li class="chapter-item expanded "><a href="wavseflm.html"><strong aria-hidden="true">6.</strong> WavSEFLM</a></li><li class="chapter-item expanded "><a href="target/index.html"><strong aria-hidden="true">7.</strong> Target Speaker Seperation</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Welcome to my blog</a></li><li class="chapter-item expanded "><a href="paper/index.html"><strong aria-hidden="true">2.</strong> Paper</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="paper/masksr.html"><strong aria-hidden="true">2.1.</strong> MaskSR</a></li></ol></li><li class="chapter-item expanded "><a href="notes/notes.html"><strong aria-hidden="true">3.</strong> Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="notes/command.html"><strong aria-hidden="true">3.1.</strong> Linux Command</a></li><li class="chapter-item expanded "><a href="notes/rir.html"><strong aria-hidden="true">3.2.</strong> Noise RIR</a></li><li class="chapter-item expanded "><a href="notes/pytorch.html"><strong aria-hidden="true">3.3.</strong> Pytorch</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="notes/pytorch_index.html"><strong aria-hidden="true">3.3.1.</strong> Pytorch Index</a></li></ol></li><li class="chapter-item expanded "><a href="notes/load_kmeans.html"><strong aria-hidden="true">3.4.</strong> Load Kmeans</a></li></ol></li><li class="chapter-item expanded "><a href="diary.html"><strong aria-hidden="true">4.</strong> Diary</a></li><li class="chapter-item expanded "><a href="wavseflm.html"><strong aria-hidden="true">5.</strong> WavSEFLM</a></li><li class="chapter-item expanded "><a href="target/index.html"><strong aria-hidden="true">6.</strong> Target Speaker Seperation</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -196,8 +196,7 @@
         <img src="./assets/me.jpg" alt="OpenAI Logo">
         <div class="text">
             <p>This is Beilong Tang from Duke Kunshan University.
-<p>I am currently working on using discrete tokens for speech separation.</p>
-<p>This blog serves as a document to record my progress.</p>
+<p>This page currently serves as my note.</p>
 </p>
         </div>
     </div>
@@ -234,20 +233,6 @@ print(w.shape)
 During inference, we just replace the entire codebook with a embedding (null embedding) repeated \(T\) times, and predict the output and use that as the \(l_u\)
 score. The logit score for inference is defined as \(l_g = (1 + w) l_c - w l_u\).</p>
 <p>During training, for each epoch, we randomly select 10% of the training data to be replaced with the null embedding.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="publication"><a class="header" href="#publication">Publication</a></h1>
-<h2 id="2024"><a class="header" href="#2024">2024</a></h2>
-<h3 id="fedkit-enabling-cross-platform-federated-learning-for-android-and-ios"><a class="header" href="#fedkit-enabling-cross-platform-federated-learning-for-android-and-ios">FedKit: Enabling Cross-Platform Federated Learning for Android and iOS</a></h3>
-<ul>
-<li>
-<p><strong>Authors:</strong> Sichang He, <strong>Beilong Tang</strong>, Boyan Zhang, Jiaoqi Shao1, Xiaomin Ouyang, Daniel Nata Nugraha</p>
-</li>
-<li>
-<p><strong>Journal:</strong> IEEE INFOCOM 2024 DEMO Paper</p>
-</li>
-<li>
-<p><strong>Link</strong>: <a href="https://www.arxiv.org/abs/2402.10464"><em>arxiv</em></a></p>
-</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="notes"><a class="header" href="#notes">Notes</a></h1>
 <p>When reading audio, it is better to normalize it before doing other operations (to avoid nan problem).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux-command"><a class="header" href="#linux-command">Linux Command</a></h1>
