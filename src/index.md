@@ -21,9 +21,7 @@
         <div class="text">
             <p>This is Beilong Tang from Duke Kunshan University.
 
-I am currently working on using discrete tokens for speech separation.
-
-This blog serves as a document to record my progress.
+This page currently serves as my note.
 </p>
         </div>
     </div>

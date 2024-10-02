@@ -3,7 +3,6 @@
 - [Welcome to my blog](index.md)
 - [Paper](paper/index.md)
     - [MaskSR](paper/masksr.md)
-- [Publication](publication.md)
 - [Notes](notes/notes.md)
     - [Linux Command](notes/command.md) 
     - [Noise RIR](notes/rir.md)
