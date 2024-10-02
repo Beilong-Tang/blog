@@ -488,6 +488,16 @@ tensor([[[ 3.4845,  0.5973, -0.2941,  ...,  1.8850, -3.3292, -3.1918],
 python ... # The command to run
 </code></pre>
 <p>Note that no <code>srun</code> before the command</p>
+<p>To run 8 tasks on a single node, you can run</p>
+<pre><code class="language-shell">#!/bin/bash
+#SBATCH -J train_test
+#SBATCH --ntasks-per-node=8
+#SBATCH -N 1
+#SBATCH --cpus-per-task=2
+#SBATCH --gres=dcu:4
+#SBATCH -p kshdnormal
+srun python test.py
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="diary"><a class="header" href="#diary">Diary</a></h1>
 <h2 id="2024-june-6"><a class="header" href="#2024-june-6">2024 June 6</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><style>

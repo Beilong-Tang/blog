@@ -186,6 +186,16 @@
 python ... # The command to run
 </code></pre>
 <p>Note that no <code>srun</code> before the command</p>
+<p>To run 8 tasks on a single node, you can run</p>
+<pre><code class="language-shell">#!/bin/bash
+#SBATCH -J train_test
+#SBATCH --ntasks-per-node=8
+#SBATCH -N 1
+#SBATCH --cpus-per-task=2
+#SBATCH --gres=dcu:4
+#SBATCH -p kshdnormal
+srun python test.py
+</code></pre>
 
                     </main>
 
