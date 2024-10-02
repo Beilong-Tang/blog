@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/publication.md",
+                "file": "src/notes/slurm.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/publication.md",
+                "file": "src/notes/slurm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/publication.md",
+                "file": "src/notes/slurm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/publication.md"
+                "file": "src/notes/slurm.md"
               }
             }
           }
@@ -162,6 +162,8 @@
   "active": "9148fe855ddbcea5",
   "lastOpenFiles": [
     "src/SUMMARY.md",
+    "src/notes/slurm.md",
+    "src/README.md",
     "src/publication.md",
     "src/index.md",
     "book/publication.html",
@@ -181,7 +183,6 @@
     "src/notes.md",
     "src/diary.md",
     "src/command.md",
-    "src/README.md",
     "src/notes/rir.md",
     "src/rir.md",
     "src/paper/index.md",
@@ -192,7 +193,6 @@
     "src/notespytorch_index.md",
     "src/notes/pytorch_index 1.md",
     "book/notespytorch_index.html",
-    "src/paper/masksr.md",
     "src/audio/wavseflm/0_output_.wav",
     "book/notes/notes.html",
     "book/notes",

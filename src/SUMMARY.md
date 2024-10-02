@@ -9,6 +9,7 @@
     - [Pytorch](notes/pytorch.md)
         - [Pytorch Index](notes/pytorch_index.md)
     - [Load Kmeans](notes/load_kmeans.md)
+    - [Slurm](notes/slurm.md)
 - [Diary](diary.md)
 - [WavSEFLM](wavseflm.md)
 - [Target Speaker Seperation](target/index.md)
