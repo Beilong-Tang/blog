@@ -54,3 +54,8 @@ sbatch -J ${JOB_NAME} -p ${card} -e ${log_path}/${current_datetime}.err -o ${log
 We can use `\` to seperate
 
 wer   /public/home/qinxy/bltang/ml_framework_slurm/exp/dasb/target/wavlm_6_layer/output/wsj0_2mix/trans_output.txt
+
+## Restart bluetooth
+```shell
+sudo systemctl status bluetooth
+```

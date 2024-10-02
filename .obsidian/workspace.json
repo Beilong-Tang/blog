@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/notes/pytorch.md",
+                "file": "src/notes/command.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/notes/pytorch.md",
+                "file": "src/notes/command.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/notes/pytorch.md",
+                "file": "src/notes/command.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/notes/pytorch.md"
+                "file": "src/notes/command.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "2cf5b99483507eaf",
   "lastOpenFiles": [
+    "src/notes/pytorch.md",
     "sample.png",
     "src/notes/command.md",
     "2024_09_08.md",
@@ -171,7 +172,6 @@
     "src/paper/index.md",
     "src/notes/load_kmeans.md",
     "src/load_kmeans.md",
-    "src/notes/pytorch.md",
     "src/pytorch.md",
     "src/notes/pytorch_index.md",
     "src/notespytorch_index.md",
