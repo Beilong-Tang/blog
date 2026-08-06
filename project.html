@@ -1,0 +1,22 @@
+---
+layout: default
+title: Project
+---
+<h1>Projects</h1>
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+
+      <ul>
+        {% assign filtered_posts = site.posts | where: 'project', project.slug %}
+        {% for post in filtered_posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <small>— {{ post.date | date: "%B %-d, %Y" }}</small>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>

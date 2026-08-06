@@ -1,0 +1,99 @@
+<script>
+MathJax = {
+  tex: {
+    tags: 'ams',    // Enable AMS-style numbering
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+  </head>
+  <body>
+    <nav>
+  
+    <a href="/">Home</a>
+  
+    <a href="/about.html">About</a>
+  
+    <a href="/blog.html" class="current">Blog</a>
+  
+    <a href="/tag.html">Tag</a>
+  
+    <a href="/project.html">Project</a>
+  
+</nav>
+
+    <main class="content">
+      <h1>Latest Posts</h1>
+
+<ul>
+  
+    <li>
+      <h2><a href="/2026/08/06/resolve_git_large_files.html">Resolve large files unable to commit to github</a></h2>
+      <p> August 6, 2026 - <a href="/tags/Github" >Github</a></p>
+      Start from the accidental commit
+git switch main
+git status
+git switch -c temp
+
+Add the exact large-file path to .gitignore, for example:
+
+/models/...
+    </li>
+  
+    <li>
+      <h2><a href="/2026/08/02/when_will_sde_and_ddpm_agree.html">When will SDE and DDPM agree</a></h2>
+      <p> August 2, 2026 - <a href="/tags/" ></a></p>
+      For DDPM with $T$ time total diffusion steps, people define
+
+\[\begin{equation}
+q(x_t|x_{t-1})
+=
+\mathcal N
+\left(
+\sqrt{1-\beta_t}\,x_{t-1},
+\beta...
+    </li>
+  
+    <li>
+      <h2><a href="/2026/08/02/paper_idea.html">Reverse SDE</a></h2>
+      <p> August 2, 2026 - <a href="/tags/" ></a></p>
+      Some ideas for the paper
+
+Improved-diffusion Imagenet64
+schedule: cosine; T: 4000;
+
+Baseline FID: 22.45
+
+Ours (DDPM sample):
+
+    </li>
+  
+    <li>
+      <h2><a href="/2026/07/31/dataloading.html">Dataloader for dict returned from Dataset</a></h2>
+      <p> July 31, 2026 - <a href="/tags/Pytorch" >Pytorch</a></p>
+      PyTorch DataLoader Automatically Collates Dictionaries
+
+Suppose each sample returned by a dataset is:
+
+(image0, {"y": 0})
+(image1, {"y": 1})
+(image...
+    </li>
+  
+</ul>
+    </main>
+  </body>
+</html>

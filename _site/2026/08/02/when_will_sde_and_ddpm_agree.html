@@ -1,0 +1,68 @@
+<script>
+MathJax = {
+  tex: {
+    tags: 'ams',    // Enable AMS-style numbering
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>When will SDE and DDPM agree</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+  </head>
+  <body>
+    <nav>
+  
+    <a href="/">Home</a>
+  
+    <a href="/about.html">About</a>
+  
+    <a href="/blog.html">Blog</a>
+  
+    <a href="/tag.html">Tag</a>
+  
+    <a href="/project.html">Project</a>
+  
+</nav>
+
+    <main class="content">
+      <h1>When will SDE and DDPM agree</h1>
+
+
+
+<p>
+  02 Aug 2026
+  
+  
+    · <a href="/projects/polar_diffusion.html">Polar Diffusion</a>
+  
+</p>
+
+<p>For DDPM with $T$ time total diffusion steps, people define</p>
+
+\[\begin{equation}
+q(x_t|x_{t-1})
+=
+\mathcal N
+\left(
+\sqrt{1-\beta_t}\,x_{t-1},
+\beta_t I
+\right).
+\label{eq:forward}
+\end{equation}\]
+
+<p>Test</p>
+
+    </main>
+  </body>
+</html>
