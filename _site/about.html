@@ -181,5 +181,19 @@ during diffusion.</p>
 </code></pre></div></div>
 
     </main>
+    <script>
+      document.querySelectorAll('div.highlight').forEach(function (block) {
+        var btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'Copy';
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(block.querySelector('code').innerText).then(function () {
+            btn.textContent = 'Copied!';
+            setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+          });
+        });
+        block.appendChild(btn);
+      });
+    </script>
   </body>
 </html>
