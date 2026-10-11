@@ -1,5 +1,5 @@
 url: "https://beilong-tang.github.io"
-baseurl: "/blog"
+baseurl: "/my_notes"
 
 collections:
   tags:
