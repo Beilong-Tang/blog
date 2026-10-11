@@ -8,10 +8,10 @@ layout: default
 <p>
   {{ page.date | date_to_string }}
   {% if page.tag %}
-    · <a href="{{ tag.url }}">{{ tag.name }}</a>
+    · <a href="{{ tag.url | relative_url }}">{{ tag.name }}</a>
   {% endif %}
   {% if project %}
-    · <a href="{{ project.url }}">{{ project.title }}</a>
+    · <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
   {% endif %}
 </p>
 

@@ -6,13 +6,13 @@ title: Tag
 <ul>
   {% for tag in site.tags %}
     <li>
-      <h2><a href="{{ tag.url }}">{{ tag.name }}</a></h2>
+      <h2><a href="{{ tag.url | relative_url }}">{{ tag.name }}</a></h2>
 
       <ul>
         {% assign filtered_posts = site.posts | where: 'tag', tag.name %}
         {% for post in filtered_posts %}
           <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             <small>— {{ post.date | date: "%B %-d, %Y" }}</small>
           </li>
         {% endfor %}

@@ -1,3 +1,6 @@
+url: "https://beilong-tang.github.io"
+baseurl: "/blog"
+
 collections:
   tags:
     output: true
